@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #f6f9ff;
+      color: #212121;
+    }
+    .navbar {
+      display: flex;
+      background: #2b3343;
+      color: #fff;
+      padding: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .navbar a {
+      flex: 1 1 0;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px;
+      font-weight: 500;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .navbar a:hover, .navbar a.active {
+      background: #46517a;
+      color: #fff;
+    }
+    .image-top-container {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 28px 0;
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+    .main-image {
+      width: 80vw;
+      max-width: 1000px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      object-fit: contain;
+      height: auto;
+    }
+    @media (max-width: 900px) {
+      .main-image {
+        width: 96vw;
+        max-width: 100vw;
+      }
+    }
+    @media (max-width: 550px) {
+      .main-image {
+        width: 100vw;
+        max-width: 100vw;
+      }
+    }
+    .main-content,
+    .projects-content,
+    .cv-content,
+    .publications-content,
+    .contact-content {
+      max-width: 750px;
+      background: #fff;
+      margin: 24px auto 48px auto;
+      box-shadow: 0 2px 8px rgba(80, 82, 135, 0.07);
+      border-radius: 15px;
+      padding: 32px 18px;
+      display: none;
+    }
+    .main-content.active,
+    .projects-content.active,
+    .cv-content.active,
+    .publications-content.active,
+    .contact-content.active {
+      display: block;
+    }
+    .cv-content iframe {
+      display: block;
+      width: 100%;
+      height: 80vh;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.07);
+      background: #fafbfe;
+      margin-top: 1em;
+    }
+    h1 { color: #2b3343; margin-top: 0; }
+    h2 { color: #2b3343; margin-top: 36px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Tabs -->
+  <nav class="navbar">
+    <a href="#home" class="active" onclick="showTab(event, 'home')">Home</a>
+    <a href="#projects" onclick="showTab(event, 'projects')">Lead Projects</a>
+    <a href="#curriculum_vitae" onclick="showTab(event, 'cv')">Curriculum Vitae</a>
+    <a href="#publications" onclick="showTab(event, 'publications')">Publications</a>
+    <a href="#contact" onclick="showTab(event, 'contact')">Contact</a>
+  </nav>
+
+  <!-- Edge-to-Edge Top Image (no panel/background) -->
+  <div class="image-top-container" id="top-image">
+    <img 
+      class="main-image"
+      src="Homepage.jpg" 
+      alt="Main Figure" 
+    >
+  </div>
+
+  <!-- Home Tab Content -->
+  <main class="main-content active" id="home">
+    <h1>Hello!</h1>
+    <p>
+      Welcome! I am I K M Reaz Rahman, a Ph.D. student at the University of California, Berkeley, with an expected graduation in Spring 2026. Prior to beginning my doctoral studies, I served as a Lecturer and Assistant Professor in the Department of Electrical and Electronic Engineering (EEE) at the Bangladesh University of Engineering and Technology (BUET). I completed both my B.Sc. (2017) and M.Sc. (2021) in EEE from BUET.
+    </p>
+    <h2>Research Interest</h2>
+    <p>
+      My research interests center on the exploration of novel semiconductor materials at the nanoscale and their applications in solid-state electronics and optoelectronics. Currently, I am working on controlling spectrally pure single-photon emission from two-dimensional chalcogenides. Previously, my research focused on the aligned growth of one-dimensional tellurium using nanoscale confinement, enabling access to previously untapped quantum phenomena that remain elusive in bulk materials. This synthesis approach also reduces variability and allows coherent integration with silicon electronics at room temperature.
+      <br><br>
+      My prior experience includes enhancing the thermal stability of tellurium for use as a <i>p</i>-type channel material with feasible back-end-of-line integration. Before that, I investigated the effects of charging on core-shell quantum dots to understand the degradation mechanisms of these nanoparticles in light-emitting devices. Additionally, I studied electroluminescence in silicon—a material typically not known for this property due to its indirect bandgap. We uncovered that the observed electroluminescence originates from hot carrier effects, occurring when bipolar carriers are injected with high-slew-rate AC pulses.
+    </p>
+  </main>
+
+  <!-- Lead Projects Tab Content -->
+  <section class="projects-content" id="projects">
+    <h1>Lead Projects</h1>
+    <ul>
+      <li>
+        <b>Single Photon Emission from 2D Chalcogenides</b><br>
+        Developing control over spectrally pure single photon emission in two-dimensional chalcogenide materials for applications in quantum communication and optoelectronics.
+      </li>
+      <li>
+        <b>Aligned Growth of One-Dimensional Tellurium Molecular Wires</b><br>
+        Engineered methods for the controlled, aligned growth of tellurium nanowires using nanoscale confinement, unlocking access to novel quantum phenomena and simplifying silicon integration.
+      </li>
+      <li>
+        <b>Thermally Stable Ruthenium Contacts for Tellurium Transistors</b><br>
+        Developed robust ruthenium contacts to enable reliable and stable operation of <i>p</i>-type tellurium transistors at elevated temperatures, advancing next-generation electronics manufacturing.
+      </li>
+      <li>
+        <b>Gated Photoluminescence in Quantum Dot Thin Films</b><br>
+        Designed devices to study photoluminescence in gated quantum dot films, uncovering degradation pathways affecting the efficiency of core-shell nanocrystals.
+      </li>
+      <li>
+        <b>Electroluminescence in Silicon Capacitors</b><br>
+        Uncovered mechanisms behind light emission in silicon under high-speed AC carrier injection.
+      </li>
+    </ul>
+  </section>
+
+  <!-- CV Tab Content -->
+  <!-- ... rest of your HTML ... -->
+  <!-- Curriculum Vitae Tab Content (updated!) -->
+  <section class="cv-content" id="cv">
+    <h1>Curriculum Vitae</h1>
+    <iframe src="Resume.pdf"></iframe>
+    
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <b>Ph.D. in Electrical Engineering and Computer Sciences</b>, University of California, Berkeley<br>
+        Expected Graduation: Spring 2026
+      </li>
+      <li>
+        <b>M.Sc. in Electrical and Electronic Engineering</b>, Bangladesh University of Engineering and Technology (BUET)<br>
+        2017 – 2021
+      </li>
+      <li>
+        <b>B.Sc. in Electrical and Electronic Engineering</b>, Bangladesh University of Engineering and Technology (BUET)<br>
+        2012 – 2017
+      </li>
+    </ul>
+
+    <h2>Professional Experience</h2>
+    <ul>
+      <li style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+        <div>
+          <b>Graduate Student Researcher</b><br>
+          University of California, Berkeley<br>
+          Sept. 2021 – Present
+        </div>
+        <div>
+          <b>Affiliate</b><br>
+          Lawrence Berkeley National Laboratory<br>
+          Sept. 2021 – Present
+        </div>
+      </li>
+      <li>
+        <b>Assistant Professor</b><br>
+        Department of Electrical and Electronic Engineering, BUET<br>
+        June 2021 – Aug. 2021
+      </li>
+      <li>
+        <b>Lecturer</b><br>
+        Department of Electrical and Electronic Engineering, BUET<br>
+        July 2018 – June 2021
+      </li>
+    </ul>
+    
+    <h2>Professional Affiliation</h2>
+    <ul>
+      <li>
+        <b>IEEE</b> – Graduate Student Member
+      </li>
+      <li>
+        <b>SPIE</b> – Student Member
+      </li>
+    </ul>
+  </section>
+    <!-- ... rest of your HTML ... -->
+
+
+  <!-- Publications Tab Content -->
+  <section class="publications-content" id="publications">
+    <h1>Publications</h1>
+    <ul style="list-style: none; padding: 0;">
+      <li>
+        <b>Google Scholar:</b>
+        <a href="https://scholar.google.com/citations?user=r3o0cTsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+          View Profile
+        </a>
+      </li>
+      <li>
+        <b>ResearchGate:</b>
+        <a href="https://www.researchgate.net/profile/Ikm_Rahman" target="_blank" rel="noopener noreferrer">
+          View Profile
+        </a>
+      </li>
+    </ul>
+
+    <h2>Journal Articles</h2>
+    <ol style="padding-left:0;">
+      <li class="pub-article">
+        <div class="pub-info">
+          <b>Rahman, IKM Reaz</b>, Taehoon Kim, Inha Kim, Naoki Higashitarumizu, Shu Wang, Shifan Wang, Hyong Min Kim et al. "Thermally Stable Ruthenium Contact for Robust p-Type Tellurium Transistors." <i>Nano Letters</i> 25, no. 10 <b>(2025)</b>: 3956-3963.<br>
+          <a href="https://doi.org/10.1021/acs.nanolett.4c06553" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+        <img class="pub-cover" src="thermally_stable_contact.jpeg" alt="Journal Cover 1">
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          Byeon, Kyeong-Jae, <b>IKM Reaz Rahman</b>, Inha Kim, Howoo Park, and Ali Javey. "Quantitative characterization of ZrO2 gate dielectric interface with tellurium." <i>Applied Physics Letters</i> 126, no. 23 <b>(2025)</b>.<br>
+          <a href="https://doi.org/10.1063/5.0267586" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          Geng, Jamie, Dehui Zhang, Inha Kim, Hyong Min Kim, Naoki Higashitarumizu, <b>IKM Reaz Rahman</b>, Lam Lam et al. "Unusually strong near‐infrared photoluminescence of highly transparent bulk InSe flakes." <i>Advanced Functional Materials</i> 35, no. 3 <b>(2025)</b>: 2413672.
+          <a href="https://doi.org/10.1002/adfm.202413672" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          Kim, Inha, Naoki Higashitarumizu, <b>IKM Reaz Rahman</b>, Shu Wang, Hyong Min Kim, Jamie Geng, Rajiv Ramanujam Prabhakar, Joel W. Ager III, and Ali Javey. "Low Contact Resistance WSe2 p-Type Transistors with Highly Stable, CMOS-Compatible Dopants." <i>Nano Letters</i> 24, no. 43 <b>(2024)</b>: 13528-13533.
+          <a href="https://doi.org/10.1021/acs.nanolett.4c02948" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+        <img class="pub-cover" src="cmos_compatible_doping.jpeg" alt="Journal Cover 1">
+      </li>
+      
+      <li class="pub-article">
+        <div class="pub-info">
+          <b>Rahman, IKM Reaz</b>, Shiekh Zia Uddin, Matthew Yeh, Naoki Higashitarumizu, Jongchan Kim, Quanwei Li, Hyeonjun Lee et al. "Gate controlled excitonic emission in quantum dot thin films." <i>Nano letters</i> 23, no. 22 <b>(2023)</b>: 10164-10170.
+          <a href="https://doi.org/10.1021/acs.nanolett.3c02456" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+        <img class="pub-cover" src="gate_controlled_PL.jpeg" alt="Journal Cover 1">
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          Higashitarumizu, Naoki, Shiekh Zia Uddin, Daniel Weinberg, Nima Sefidmooye Azar, <b>I. K. M. Reaz Rahman</b>, Vivian Wang, Kenneth B. Crozier, Eran Rabani, and Ali Javey. "Anomalous thickness dependence of photoluminescence quantum yield in black phosphorous." <i>Nature Nanotechnology</i> 18, no. 5 <b>(2023)</b>: 507-513.
+          <a href="https://doi.org/10.1038/s41565-023-01335-0" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          <b>Rahman, I. K. M. Reaz</b>, Shiekh Zia Uddin, Hyungjin Kim, Naoki Higashitarumizu, and Ali Javey. "Low voltage AC electroluminescence in silicon MOS capacitors." <i>Applied Physics Letters</i> 121, no. 19 <b>(2022)</b>.
+          <a href="https://doi.org/10.1063/5.0120507" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          Uddin, Shiekh Zia, Naoki Higashitarumizu, Hyungjin Kim, <b>IKM Reaz Rahman</b>, and Ali Javey. "Efficiency roll-off free electroluminescence from monolayer WSe2." <i>Nano letters</i> 22, no. 13 <b>(2022)</b>: 5316-5321.
+          <a href="https://doi.org/10.1021/acs.nanolett.2c01311" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+        <img class="pub-cover" src="efficiency_roll_free.jpeg" alt="Journal Cover 1">
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          <b>Rahman, IKM Reaz</b>, Md Irfan Khan, and Quazi DM Khosru. "Electrostatic characterization and threshold voltage modeling of inversion type InGaAs gate-all-around MOSFET." <i>Journal of Computational Electronics</i> 20, no. 4 <b>(2021)</b>: 1504-1512.
+          <a href="https://doi.org/10.1007/s10825-021-01716-5" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          <b>Rahman, I. K. M. Reaz</b>, Md Irfan Khan, and Quazi DM Khosru. "Analytical drain current and performance evaluation for inversion type InGaAs gate-all-around MOSFET." <i>AIP Advances</i> 11, no. 6 <b>(2021)</b>.
+          <a href="https://doi.org/10.1063/5.0052718" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          Khan, Md Irfan, <b>IKM Reaz Rahman</b>, and Quazi DM Khosru. "Surface potential-based analytical modeling of electrostatic and transport phenomena of GaN nanowire junctionless MOSFET." <i>IEEE Transactions on Electron Devices</i> 67, no. 9 <b>(2020)</b>: 3568-3576.
+          <a href="https://doi.org/10.1109/TED.2020.3011645" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+      <li class="pub-article">
+        <div class="pub-info">
+          <b>Rahman, IKM Reaz</b>, Md Irfan Khan, and Quazi DM Khosru. "A rigorous investigation of electrostatic and transport phenomena of GaN double-channel HEMT." <i>IEEE Transactions on Electron Devices</i> 66, no. 7 <b>(2019)</b>: 2923-2931.
+          <a href="https://doi.org/10.1109/TED.2019.2915837" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+        </div>
+      </li>
+
+    </ol>
+
+    <h2>Conference Proceedings</h2>
+    <ol>
+      <li>
+        Jamal, Moniruzzaman, <b>IKM Reaz Rahman</b>, Ali Javey, and Mary C. Scott. "Structural Analysis of Growth-Controlled Tellurium using Scanning Electron Nanodiffraction." <i>Microscopy and Microanalysis</i> 31, no. Supplement_1 <b>(2025)</b>: ozaf048-811.
+        <a href="https://doi.org/10.1093/mam/ozaf048.811" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+      </li>
+
+      <li>
+        Khan, Md Irfan, <b>IKM Reaz Rahman</b>, and Quazi DM Khosru. "Analytical Modeling of Capacitance-Voltage Characteristics of GaN Nanowire Junctionless MOSFET." In 2020 IEEE 20th International Conference on Nanotechnology (<i>IEEE-NANO</i>), pp. 67-72. IEEE, <b>2020</b>.
+        <a href="https://doi.org/10.1109/NANO47656.2020.9183461" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+      </li>
+
+      <li>
+        <b>Rahman, IKM Reaz</b>, Md Irfan Khan, Marjana Mahdia, and Quazi DM Khosru. "Analytical modeling of electrostatic characteristics of enhancement mode GaN double channel HEMT." In 2018 IEEE 13th Nanotechnology Materials and Devices Conference (<i>NMDC</i>), pp. 1-4. IEEE, <b>2018</b>.
+        <a href="https://doi.org/10.1109/NMDC.2018.8605851" target="_blank" rel="noopener noreferrer">[DOI Link]</a>
+      </li>
+
+    </ol>
+  </section>
+
+  <style>
+  /* Style for Journal Article list items with cover images */
+  .pub-article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #f6f7fa;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    list-style: decimal inside;
+  }
+  .pub-info {
+    flex: 1 1 0;
+  }
+  .pub-cover {
+    width: 130px;         /* Make it wider for landscape images */
+    height: 90px;         /* Adjust as needed for your aspect ratio */
+    object-fit: contain;  /* Show the full image inside the box */
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(60,60,100,0.08);
+    margin-left: 10px;
+    background: #fff;     /* Make background white for images with transparency or aspect difference */
+    padding: 2px;         /* Optional: small margin inside the box */
+  }
+  @media (max-width: 600px) {
+    .pub-article {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .pub-cover {
+      margin: 10px 0 0 0;
+      width: 100%;
+      max-width: 98vw;
+      height: auto;
+      aspect-ratio: 13/9;  /* Keeps the intended shape in mobile */
+    }
+  }
+    .publications-content {
+    width: 75vw;
+    max-width: 1000px;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(80, 82, 135, 0.07);
+    border-radius: 15px;
+    padding: 32px 18px;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    }
+  </style>
+
+  <!-- Contact Tab Content -->
+  <section class="contact-content" id="contact">
+    <h1>Contact</h1>
+    <ul style="list-style: none; padding: 0;">
+      <li>
+        <b>Email:</b>
+        <a href="mailto:ikmreaz_rahman@berkeley.edu">ikmreaz_rahman@berkeley.edu</a>
+      </li>
+      <li>
+        <b>LinkedIn:</b>
+        <a href="https://www.linkedin.com/in/i-k-m-reaz-rahman-750316a6" target="_blank" rel="noopener">
+          linkedin.com/in/ikmreazrahman
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <script>
+    function showTab(event, tabId) {
+      event.preventDefault();
+      // Set active tab on menu
+      document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
+      // Hide all content
+      document.querySelectorAll('.main-content, .projects-content, .cv-content, .publications-content, .contact-content').forEach(section => {
+        section.classList.remove('active');
+      });
+      // Show only selected
+      if(tabId === 'projects'){
+        document.getElementById('projects').classList.add('active');
+      } else if(tabId === 'cv'){
+        document.getElementById('cv').classList.add('active');
+      } else if(tabId === 'publications'){
+        document.getElementById('publications').classList.add('active');
+      } else if(tabId === 'contact'){
+        document.getElementById('contact').classList.add('active');
+      } else {
+        document.getElementById('home').classList.add('active');
+      }
+    }
+    // Optional: Open correct tab on load if hash is present in URL
+    window.addEventListener('DOMContentLoaded', function() {
+      let hash = location.hash.replace('#', '');
+      if(hash) {
+        // Find a corresponding tab and trigger click
+        let link = document.querySelector('.navbar a[href="#'+hash+'"]');
+        if(link) link.click();
+      }
+    });
+  </script>
+</body>
+</html>
