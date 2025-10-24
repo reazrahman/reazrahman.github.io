@@ -98,6 +98,38 @@
     }
     h1 { color: #2b3343; margin-top: 0; }
     h2 { color: #2b3343; margin-top: 36px; }
+
+    @media (max-width: 600px) {
+    .main-content,
+    .projects-content,
+    .cv-content,
+    .publications-content,
+    .contact-content {
+      width: 100vw;
+      min-width: 0;
+      max-width: 100vw;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .main-content h1,
+    .main-content h2,
+    .projects-content h1,
+    .projects-content h2,
+    .cv-content h1,
+    .cv-content h2,
+    .publications-content h1,
+    .publications-content h2,
+    .contact-content h1,
+    .contact-content h2 {
+      text-align: center;
+    }
+    .image-top-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
   </style>
 </head>
 <body>
